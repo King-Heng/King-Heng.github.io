@@ -12,12 +12,12 @@
   <meta name="description" content="Write down some useful linux commands in order to work more efficiently on the remote server. 1. mkdir1$ mkdir -p folder&#x2F;subfolder  create multiple nested folders by using the -p option  2. rm1&amp; r">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Useful Linux Commands">
-<meta property="og:url" content="http://example.com/2022/07/30/LInux/index.html">
+<meta property="og:url" content="http://example.com/2022/07/30/Linux/index.html">
 <meta property="og:site_name" content="王珩&#39;s blog">
 <meta property="og:description" content="Write down some useful linux commands in order to work more efficiently on the remote server. 1. mkdir1$ mkdir -p folder&#x2F;subfolder  create multiple nested folders by using the -p option  2. rm1&amp; r">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-30T13:36:24.000Z">
-<meta property="article:modified_time" content="2022-08-03T03:24:04.966Z">
+<meta property="article:modified_time" content="2022-08-13T15:38:00.926Z">
 <meta property="article:author" content="Heng Wang">
 <meta property="article:tag" content="Note">
 <meta name="twitter:card" content="summary">
@@ -95,7 +95,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Note/" style="font-size: 10px;">Note</a>
+						<a href="/tags/Lab/" style="font-size: 10px;">Lab</a> <a href="/tags/Note/" style="font-size: 20px;">Note</a>
 					</div>
 				</section>
 				
@@ -159,10 +159,10 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-LInux" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Linux" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2022/07/30/LInux/" class="article-date">
+      <a href="/2022/07/30/Linux/" class="article-date">
   	<time datetime="2022-07-30T13:36:24.000Z" itemprop="datePublished">2022-07-30</time>
 </a>
     </div>
@@ -203,38 +203,50 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Write down some useful linux commands in order to work more efficiently on the remote server.</p>
-<h1 id="1-mkdir"><a href="#1-mkdir" class="headerlink" title="1. mkdir"></a>1. mkdir</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> -p folder/subfolder</span><br></pre></td></tr></table></figure>
+<h2 id="1-mkdir"><a href="#1-mkdir" class="headerlink" title="1. mkdir"></a>1. mkdir</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> -p folder/subfolder</span><br></pre></td></tr></table></figure>
 <ul>
 <li>create multiple nested folders by using the -p option</li>
 </ul>
-<h1 id="2-rm"><a href="#2-rm" class="headerlink" title="2. rm"></a>2. rm</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&amp; <span class="built_in">rm</span> -rf no_empty1 no_empty2</span><br></pre></td></tr></table></figure>
+<h2 id="2-rm"><a href="#2-rm" class="headerlink" title="2. rm"></a>2. rm</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&amp; <span class="built_in">rm</span> -rf no_empty1 no_empty2</span><br></pre></td></tr></table></figure>
 <ul>
 <li>delete not empty folders(or files)</li>
 </ul>
-<h1 id="3-open"><a href="#3-open" class="headerlink" title="3. open"></a>3. open</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ open &lt;directory&gt; or &lt;file&gt; or &lt;app&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="3-open"><a href="#3-open" class="headerlink" title="3. open"></a>3. open</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ open &lt;directory&gt; or &lt;file&gt; or &lt;app&gt;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>a little confused</li>
 </ul>
 <span id="more"></span>
-<h1 id="4-mv"><a href="#4-mv" class="headerlink" title="4. mv"></a>4. mv</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mv</span> old_name new_name <span class="comment"># rename files and folders</span></span><br><span class="line">$ <span class="built_in">mv</span> file1 file2 folder</span><br></pre></td></tr></table></figure>
+<h2 id="4-mv"><a href="#4-mv" class="headerlink" title="4. mv"></a>4. mv</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mv</span> old_name new_name <span class="comment"># rename files and folders</span></span><br><span class="line">$ <span class="built_in">mv</span> file1 file2 folder</span><br></pre></td></tr></table></figure>
 <ul>
 <li>if the last parameter is a folder, the list of files will be moved to the last folder</li>
 <li>all used to rename files and directories</li>
 </ul>
-<h1 id="5-cp"><a href="#5-cp" class="headerlink" title="5. cp"></a>5. cp</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> -r folder1 folder2</span><br></pre></td></tr></table></figure>
+<h2 id="5-cp"><a href="#5-cp" class="headerlink" title="5. cp"></a>5. cp</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> -r folder1 folder2</span><br></pre></td></tr></table></figure>
 
-<h1 id="6-touch"><a href="#6-touch" class="headerlink" title="6. touch"></a>6. touch</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> file_empty</span><br></pre></td></tr></table></figure>
+<h2 id="6-touch"><a href="#6-touch" class="headerlink" title="6. touch"></a>6. touch</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> file_empty</span><br></pre></td></tr></table></figure>
 <ul>
 <li>if file_empty existed, the timestamp of the file will be modified to the current system time, else an empty file will be created.</li>
 </ul>
-<h1 id="7-find"><a href="#7-find" class="headerlink" title="7. find"></a>7. find</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ find . -<span class="built_in">type</span> d -name <span class="string">&quot;*.pt&quot;</span> -or -name <span class="string">&quot;*.npy&quot;</span></span><br><span class="line">$ find . -<span class="built_in">type</span> f -size +100k -size -100M -mtime -2 <span class="comment"># find files in pwd with size &gt;=100K and &lt;=100M and modified within 2 days</span></span><br><span class="line">$ find / -<span class="built_in">type</span> f -size 0 -<span class="built_in">exec</span> <span class="built_in">ls</span> -l <span class="comment"># find all the files with size 0 in the system and list their complete paths</span></span><br></pre></td></tr></table></figure>
+<h2 id="7-find"><a href="#7-find" class="headerlink" title="7. find"></a>7. find</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ find . -<span class="built_in">type</span> d -name <span class="string">&quot;*.pt&quot;</span> -or -name <span class="string">&quot;*.npy&quot;</span></span><br><span class="line">$ find . -<span class="built_in">type</span> f -size +100k -size -100M -mtime -2 <span class="comment"># find files in pwd with size &gt;=100K and &lt;=100M and modified within 2 days</span></span><br><span class="line">$ find / -<span class="built_in">type</span> f -size 0 -<span class="built_in">exec</span> <span class="built_in">ls</span> -l <span class="comment"># find all the files with size 0 in the system and list their complete paths</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="8-ln"><a href="#8-ln" class="headerlink" title="8. ln"></a>8. ln</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">ln</span> -s origin new <span class="comment"># -s means symbolic(or soft?)</span></span><br><span class="line">$ <span class="built_in">ln</span> origin new <span class="comment"># hard link</span></span><br></pre></td></tr></table></figure>
+<h2 id="8-ln"><a href="#8-ln" class="headerlink" title="8. ln"></a>8. ln</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">ln</span> -s origin new <span class="comment"># -s means symbolic(or soft?)</span></span><br><span class="line">$ <span class="built_in">ln</span> origin new <span class="comment"># hard link</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>soft links are more like Windows shortcuts, they can link to other filesystems and to directories, they’ll be broken after thr original is removed</li>
 <li>soft links exist in the form of a path, while hard links exit in the form of a copy of file(without using real memory)</li>
 </ul>
+<h2 id="9-gzip"><a href="#9-gzip" class="headerlink" title="9. gzip"></a>9. gzip</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ gzip -k filename1 filename2 <span class="comment"># -k option: compress without replacing the original file</span></span><br><span class="line">$ gzip -9 filename <span class="comment"># 9 level of compression, defualt:6, the bigger the better compression(and slower)</span></span><br><span class="line">$ gzip -r folder1 <span class="comment"># recursively compress the files in a folder</span></span><br><span class="line">$ gzip -d file1 <span class="comment"># decompress a file, analogous to gunzip file1</span></span><br><span class="line">$ gzip -c file1 &gt; file2 <span class="comment"># -c option: output to the std output stream, and can be redirected to rename the file</span></span><br></pre></td></tr></table></figure>
 
+<h2 id="10-tar"><a href="#10-tar" class="headerlink" title="10. tar"></a>10. tar</h2><ul>
+<li>create an archive, grouping multiple files in a single file<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ tar -cvf archive.tar file1 file2 <span class="comment"># -c = --create, -v = --verbose, -f = --file(specify the file)</span></span><br><span class="line">$ tar -xvf archive.tar -C folder1 <span class="comment"># -x means extract, -C can extract the achive to a certain folder</span></span><br><span class="line">$ tar -tf archive.tar <span class="comment"># -t = --list, list the files in the archive</span></span><br><span class="line">$ tar -czvf archive.tar.gz file1 file2 <span class="comment"># create a compressed archive, compress the while archive(leverage the similarity between files, compared to gzip single files)</span></span><br><span class="line">$ tar -xvf archive.tar.gz <span class="comment"># will recognize it&#x27;s a compressed archive, and decompress together with unarchive</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="11-alias"><a href="#11-alias" class="headerlink" title="11. alias"></a>11. alias</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">alias</span> ll=<span class="string">&quot;ls -al&quot;</span> <span class="comment"># set other names for command</span></span><br><span class="line">$ <span class="built_in">alias</span> <span class="comment"># show the aliases defined, work until the terminal is closed, to make it permanent, edit in ~/.profile ot ~/.bashrc</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="12-cat"><a href="#12-cat" class="headerlink" title="12. cat"></a>12. cat</h2><ul>
+<li>the whole name is concatenate<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cat</span> -n code.cpp <span class="comment"># -n = --name show the line numbers, -b show without blank lines</span></span><br><span class="line">$ <span class="built_in">cat</span> -n a.txt b.txt &gt;&gt; a_plus_b.txt <span class="comment"># append the contents of files with line numbers to a file(create one if not exist)</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="13-tail"><a href="#13-tail" class="headerlink" title="13. tail"></a>13. tail</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">tail</span> -f notes.log <span class="comment"># any new content in the file will be printed, Ctrl-C to exit</span></span><br><span class="line">$ <span class="built_in">tail</span> -n 5 a.txt <span class="comment"># show last 5 lines(default: 10)</span></span><br><span class="line">$ <span class="built_in">tail</span> -n +10 a.txt <span class="comment"># show from the 10th line</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="14"><a href="#14" class="headerlink" title="14."></a>14.</h2>
       
     </div>
     
@@ -242,6 +254,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2022/08/04/tricks/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          tricks
+        
+      </div>
+    </a>
   
   
     <a href="/2022/07/30/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
@@ -282,7 +303,7 @@
 <script>
 	var yiliaConfig = {
 		fancybox: true,
-		mathjax: false,
+		mathjax: true,
 		animate: true,
 		isHome: false,
 		isPost: true,
@@ -296,6 +317,26 @@
 <script src="/js/main.js"></script>
 
 
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
 
 
   </div>
