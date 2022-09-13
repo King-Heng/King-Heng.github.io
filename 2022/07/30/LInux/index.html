@@ -17,7 +17,7 @@
 <meta property="og:description" content="Write down some useful linux commands in order to work more efficiently on the remote server. 1. mkdir1$ mkdir -p folder&#x2F;subfolder  create multiple nested folders by using the -p option  2. rm1&amp; r">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-30T13:36:24.000Z">
-<meta property="article:modified_time" content="2022-08-13T15:38:00.926Z">
+<meta property="article:modified_time" content="2022-08-24T15:05:40.029Z">
 <meta property="article:author" content="Heng Wang">
 <meta property="article:tag" content="Note">
 <meta name="twitter:card" content="summary">
@@ -95,7 +95,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Lab/" style="font-size: 10px;">Lab</a> <a href="/tags/Note/" style="font-size: 20px;">Note</a>
+						<a href="/tags/Lab/" style="font-size: 10px;">Lab</a> <a href="/tags/Note/" style="font-size: 20px;">Note</a> <a href="/tags/Notes/" style="font-size: 10px;">Notes</a>
 					</div>
 				</section>
 				
@@ -246,7 +246,28 @@
 </ul>
 <h2 id="13-tail"><a href="#13-tail" class="headerlink" title="13. tail"></a>13. tail</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">tail</span> -f notes.log <span class="comment"># any new content in the file will be printed, Ctrl-C to exit</span></span><br><span class="line">$ <span class="built_in">tail</span> -n 5 a.txt <span class="comment"># show last 5 lines(default: 10)</span></span><br><span class="line">$ <span class="built_in">tail</span> -n +10 a.txt <span class="comment"># show from the 10th line</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="14"><a href="#14" class="headerlink" title="14."></a>14.</h2>
+<h2 id="14-wc"><a href="#14-wc" class="headerlink" title="14. wc"></a>14. wc</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">wc</span> a.txt <span class="comment"># show lines, words, bytes</span></span><br><span class="line">$ <span class="built_in">ls</span> -al | <span class="built_in">wc</span> <span class="comment"># receive inputs via pipe(file list)</span></span><br></pre></td></tr></table></figure>
+<p>-l -w -c option will just show the number of list, number of words, number of bytes</p>
+<h2 id="15-grep"><a href="#15-grep" class="headerlink" title="15. grep"></a>15. grep</h2><p>(global regular expression print)<br>search in files, or combine it with pipes to filter the output of another command.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ grep -n xjp xjp_bio.txt <span class="comment"># -n show the line number</span></span><br><span class="line">$ grep -nC 2 xjp xjp_bio.txt <span class="comment"># -C option show n lines before and after</span></span><br><span class="line">$ ps -aux | grep name</span><br></pre></td></tr></table></figure>
+<p>-i option to make the search case insensitive</p>
+<h2 id="16-chown"><a href="#16-chown" class="headerlink" title="16. chown"></a>16. chown</h2><p>the owner(and the root user) can change the owner to another user</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">chown</span> &lt;owner&gt; &lt;file&gt;</span><br><span class="line">$ <span class="built_in">chown</span> &lt;owner&gt;:&lt;group&gt; &lt;file&gt; <span class="comment"># change group simultaneously</span></span><br><span class="line">$ <span class="built_in">chgrp</span> &lt;group&gt; &lt;file&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="17-chmod"><a href="#17-chmod" class="headerlink" title="17. chmod"></a>17. chmod</h2><ul>
+<li>0 no permissopn</li>
+<li>1 if has execution permission</li>
+<li>2 if has write permission</li>
+<li>4 if has read permission<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">chmod</span> 777 filename <span class="comment"># 7=1+2+4(rwx*3)</span></span><br><span class="line">$ <span class="built_in">chmod</span> a+rwx filename </span><br></pre></td></tr></table></figure>
+another way:</li>
+<li>use + or - to add a permission or dismiss it(a stands for all, u for user, g for group, o for others(not the owner, not in the same group) )</li>
+<li>user &#x3D; to reset</li>
+</ul>
+<h2 id="18-umask"><a href="#18-umask" class="headerlink" title="18. umask"></a>18. umask</h2><p>default permissions</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">umask</span> -S <span class="comment"># -S to see a readable version</span></span><br><span class="line">$ <span class="built_in">umask</span> g+x <span class="comment"># change the defaults</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="19-du"><a href="#19-du" class="headerlink" title="19. du"></a>19. du</h2><p>disk usage</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">du</span> -h directory <span class="comment"># show a human-readable notation for sizes, -a option will show all the files</span></span><br><span class="line">$ <span class="built_in">du</span> -h &lt;directory&gt; | <span class="built_in">sort</span> -nr <span class="comment"># sort the directories by size, (sort -n: sort by numeric order, -r reverse the order(large--&gt;small))</span></span><br></pre></td></tr></table></figure>
       
     </div>
     

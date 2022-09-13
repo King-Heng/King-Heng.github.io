@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>cs224w | 王珩&#39;s blog</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="60 lectures, a note for everyone!1. Motivation for Graph ML  capture the relationships between different objects or entities graph structure allows us to model the underlying domain in a fateful way r">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cs224w">
+<meta property="og:url" content="http://example.com/2022/08/25/cs224w/index.html">
+<meta property="og:site_name" content="王珩&#39;s blog">
+<meta property="og:description" content="60 lectures, a note for everyone!1. Motivation for Graph ML  capture the relationships between different objects or entities graph structure allows us to model the underlying domain in a fateful way r">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-08-25T09:05:50.000Z">
+<meta property="article:modified_time" content="2022-09-13T02:39:20.845Z">
+<meta property="article:author" content="Heng Wang">
+<meta property="article:tag" content="Notes">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternative" href="/atom.xml" title="王珩&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+				<img lazy-src="https://avatars.githubusercontent.com/u/98938410?v=4" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+			<h1 class="header-author"><a href="/">Heng Wang</a></h1>
+		</hgroup>
+
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">Home</a></li>
+				        
+							<li><a href="/archives">Archives</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="half-header-menu">
+						<a class="hide">Home</a>
+						<a>Tags</a>
+						<a>Links</a>
+						<a>About</a>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Arthur-Heng" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="/wh2213210554@gmail.com" title="mail">mail</a>
+					        
+						</div>
+						<!-- music -->
+						
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Lab/" style="font-size: 10px;">Lab</a> <a href="/tags/Note/" style="font-size: 20px;">Note</a> <a href="/tags/Notes/" style="font-size: 10px;">Notes</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/">github</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">I&#39;m a developer.</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://avatars.githubusercontent.com/u/98938410?v=4" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">Home</a></li>
+		        
+					<li><a href="/archives">Archives</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Arthur-Heng" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="/wh2213210554@gmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-cs224w" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/08/25/cs224w/" class="article-date">
+  	<time datetime="2022-08-25T09:05:50.000Z" itemprop="datePublished">2022-08-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      cs224w
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/DL/">DL</a><a class="article-category-link" href="/categories/DL/GNN/">GNN</a>
+	</div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="60-lectures-a-note-for-everyone"><a href="#60-lectures-a-note-for-everyone" class="headerlink" title="60 lectures, a note for everyone!"></a>60 lectures, a note for everyone!</h1><h2 id="1-Motivation-for-Graph-ML"><a href="#1-Motivation-for-Graph-ML" class="headerlink" title="1. Motivation for Graph ML"></a>1. Motivation for Graph ML</h2><hr>
+<ul>
+<li>capture the relationships between different objects or entities</li>
+<li>graph structure allows us to model the underlying domain in a fateful way</li>
+<li>representation learning: automatically learn the features</li>
+<li>learn a neurak network: f u–&gt; R(d)(d dimension)</li>
+</ul>
+<h2 id="2-Applications-of-Graph-ML"><a href="#2-Applications-of-Graph-ML" class="headerlink" title="2. Applications of Graph ML"></a>2. Applications of Graph ML</h2><hr>
+<ul>
+<li>node classification, link prediction, graph classification, Clustering(detect if nodes form a community)</li>
+<li>Graph generation: drug discovery; Graph evolution: Physical simulation</li>
+</ul>
+<h2 id="3-Choice-of-Graph-Representation"><a href="#3-Choice-of-Graph-Representation" class="headerlink" title="3. Choice of Graph Representation"></a>3. Choice of Graph Representation</h2><hr>
+<ul>
+<li>Components: Objects, interactions, systems</li>
+<li>Bipartite graph: Authors to papers, Actors to movies(appeared in), users to movies(rated on)<ul>
+<li>folded&#x2F;projected bipartite graph: link the nodes if they have the same neighbor(thus U, V get connected, which is called a project)</li>
+</ul>
+</li>
+<li>Representation of graph: Adjacency matrix, Edge list(2-d array)<ul>
+<li>most real-world networks are sparse</li>
+</ul>
+</li>
+<li>Node and Edge attributes</li>
+</ul>
+<h2 id="4-Traditional-Feature-based-Methods-Node-level-features"><a href="#4-Traditional-Feature-based-Methods-Node-level-features" class="headerlink" title="4. Traditional Feature-based Methods: Node-level features"></a>4. Traditional Feature-based Methods: Node-level features</h2><hr>
+<ul>
+<li>traditional ML pipelines uses hand-designed features</li>
+<li>two types of features: structural features, attributes of the node itself</li>
+<li>Goal: charaterize the position and the structure of a node in the graph<ul>
+<li>method: Node degree, Node centrality, Clustering coefficient, Graphlets</li>
+</ul>
+</li>
+<li>Node degree drawback: counts the neighboring nodes without capturing the importance of them</li>
+<li>Node centrality tries to capture the importance<ul>
+<li>Eigenvector centrality: λc &#x3D; Ac, the leading eigenvector c is for centrality</li>
+<li>Betweeness centrality: more important if lies on more shortest paths</li>
+<li>Closeness centrality: A node is important if it has small shortest path length to all other nodes</li>
+<li>Clustering coefficient: how connected the neighbors are</li>
+</ul>
+</li>
+<li>We can see that Clustering coefficient counts the triangles, generalized–&gt; graphlets</li>
+<li>Graphlet Degree Vector(GDV): a count vector of graphlets rooted at a given node<ul>
+<li>provide a measure of a node’s local network topology</li>
+<li>more detailed, and many hops</li>
+</ul>
+</li>
+<li>two types of features:<ul>
+<li>importance-based features(predict important nodes,e.g. celebrity in social network)<ul>
+<li>Node degree</li>
+<li>Node centrality</li>
+</ul>
+</li>
+<li>structure-based features(predict the role of a node in the graph)<ul>
+<li>Node degree</li>
+<li>Clustering coefficient</li>
+<li>Graphlet degree vector</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-Traditional-Feature-based-Methods-Link-level-features"><a href="#5-Traditional-Feature-based-Methods-Link-level-features" class="headerlink" title="5. Traditional Feature-based Methods: Link-level features"></a>5. Traditional Feature-based Methods: Link-level features</h2><ul>
+<li>predict new links based on existing links, top k node pairs are predicted while testing</li>
+<li>the <strong>key</strong> is to design features for <strong>a pair of</strong> nodes</li>
+<li>two formulaions of the task<ul>
+<li>Links missing at random</li>
+<li>Links over time</li>
+</ul>
+</li>
+<li>features:<ul>
+<li>distance-based features<ul>
+<li>shortest path</li>
+<li>local neighborhood features(shared neighbors…), but value for nodes don’t have common neighbors is 0, which may also be connected in the future</li>
+<li>global neighborhood overlap: Katz index(count the num of all lengths of paths between a pair of nodes, using powers of A)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-Traditional-Feature-based-Methods-Graph-level-features"><a href="#6-Traditional-Feature-based-Methods-Graph-level-features" class="headerlink" title="6. Traditional Feature-based Methods: Graph-level features"></a>6. Traditional Feature-based Methods: Graph-level features</h2><ul>
+<li>Kernel methods are widely used in traditional ML </li>
+<li>Graph Kernels: measure similarity between 2 graphs</li>
+<li>Bag-of-*</li>
+<li>Color Refinement: after k steps of color refinements, c(k+1)(v) summarizes the the structure of k-hop neighborhood, hash the color, then the WL kernel counts the number of nodes of a given color, then compute the inner product of the two color count vectors, time complexity linear in #edges</li>
+</ul>
+<h2 id="7-Node-Embeddings"><a href="#7-Node-Embeddings" class="headerlink" title="7. Node Embeddings"></a>7. Node Embeddings</h2><ul>
+<li>Representation learning: automatically</li>
+<li>Task: map nodes into an embedding space</li>
+<li>Encoder: maps each node to a low-dimensional vector</li>
+<li>Decoder: similarity function: dot product and so on</li>
+<li>Simplest encoding approach:Encoder is just an embedding-lookup(shallow encoder, optimize the embeddings directly)</li>
+<li>Node embeddings: self-supervised, task independent</li>
+</ul>
+<h2 id="8-Random-Walk-Approaches-for-Node-Embeddings"><a href="#8-Random-Walk-Approaches-for-Node-Embeddings" class="headerlink" title="8. Random Walk Approaches for Node Embeddings"></a>8. Random Walk Approaches for Node Embeddings</h2><ul>
+<li>expressive(idea: if r.w. from u visits v with high probability, u v are similar(high-order multi-hop information)), efficient(not all the pairs of node)</li>
+<li>instead of normalizing w.r.t.(with respect to) all nodes, just normalize against k  random “negative samples”</li>
+<li>higher k gives more robust estimates, in pratice k &#x3D; 5~20</li>
+<li>stochastic gradient descent, zi are all initailized with random values</li>
+<li>Summary: run short fixed length randon-walk starting from each node, for each node u collect N(u), write the loss function, optimize the embeddings with SGD. Loss function can be efficiently approximated with negative sampling.</li>
+<li>random walk: simplest idea:just run fixed length, unbiased(DeepWalk KDD’14)</li>
+<li>node2vec(KDD’16)</li>
+<li>goal: Embed nodes with similar network neighborhoods close in the feature space(frame this goal as a maximum likelihood optimization problem)</li>
+<li>Idea: use flexible, biased random walk, trade off between local and global(bfs | dfs)</li>
+<li>Two parameters<ul>
+<li>Retuen parameter p(to the previous node)</li>
+<li>In-out parameter q:(moving outwards(DFS) or inwards(BFS))</li>
+<li>1&#x2F;p back, 1&#x2F;q out, 1 walk to a node with the same distance to the previous node (1&#x2F;p, 1&#x2F;q, 1) are unnormalized</li>
+<li>come over edge(s1,w) and is at w, corresponding dist is(0, 2, 1)</li>
+<li>BFS-like walk: Low value if p</li>
+</ul>
+</li>
+<li>Linear-time complexity, 3 steps are parallelized</li>
+</ul>
+<h2 id="9-Embedding-Entire-Graphs"><a href="#9-Embedding-Entire-Graphs" class="headerlink" title="9. Embedding Entire Graphs"></a>9. Embedding Entire Graphs</h2><ul>
+<li>Tasks: Classifying toxic vs. non-toxic molecules</li>
+<li>Idea1: sum(or average) the embeddings of all the nodes</li>
+<li>Idea2: Introduce a “virual node”</li>
+<li>Anonymous Walk(ICML’18)</li>
+<li>States in anonymous walks correspond to the index of the firt time we visited the node in the random walk</li>
+<li>Represent the graph as a probability distribution over anonymous walks</li>
+<li>For example, set <em>l</em> &#x3D; 3, then we can represent the graph as a 5-dim vector, since there are 5 anonymous walks of length 3(111,112,121,122,123)</li>
+<li>New idea: Learn Walk Embeddings(a little confused)</li>
+</ul>
+<h2 id="10-PageRank"><a href="#10-PageRank" class="headerlink" title="10. PageRank"></a>10. PageRank</h2><ul>
+<li>A page is important if it is pointed by other important pages</li>
+<li>rj &#x3D; sum(ri &#x2F; di) </li>
+<li>M is the stochastic adjacency matrix M, wanna solve r &#x3D; Mr</li>
+</ul>
+<h2 id="11-How-to-Solve"><a href="#11-How-to-Solve" class="headerlink" title="11. How to Solve?"></a>11. How to Solve?</h2><ul>
+<li>Power Iteration Method</li>
+<li>Random telepot: jump to any pages with prob. β, solves the issues of dead-ends(some pages have no out-links, cause importance to “leak out”) and spider-traps(all out-links are within the group, eventually sppider traps absorb all importance)</li>
+</ul>
+<h2 id="12-Random-Walk-with-Restarts-and-Personalized-Pagerank"><a href="#12-Random-Walk-with-Restarts-and-Personalized-Pagerank" class="headerlink" title="12. Random Walk with Restarts and Personalized Pagerank"></a>12. Random Walk with Restarts and Personalized Pagerank</h2><ul>
+<li><p>Ranks proximity of nodes to the teleport nodes <em><strong>S</strong></em></p>
+</li>
+<li><p>Q: What’s most related to Item Q? Let <em><strong>S</strong></em> &#x3D; {<em><strong>Q</strong></em>}</p>
+</li>
+<li><p>In traditional Pagrank, S is all of the nodes</p>
+</li>
+<li><p>Idea:</p>
+</li>
+<li><p>Every node has some importance</p>
+</li>
+<li><p>Importance gets evenly split among all edges and pushed to the neighbors</p>
+</li>
+<li><p>Random Walk with Restarts: Personalized Pagerank where teleport is the same node</p>
+</li>
+<li><p>Count the number of visits, if is bigger, the nodes are more similar to start node S, as their are more common neighbors and the distance is short(with less restart)</p>
+</li>
+<li><p>Benefits: considers:</p>
+</li>
+<li><p>Multiple connections</p>
+</li>
+<li><p>Multiple paths</p>
+</li>
+<li><p>Direct and inderect connections</p>
+</li>
+<li><p>Degree of the node</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/08/14/CSAPP-datalab/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSAPP datalab</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2022 Heng Wang
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
